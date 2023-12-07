@@ -1,33 +1,42 @@
 <template>
-  <div id="intro" class="custom-flex-center h-screen p-20">
-    <!-- DEBUG START -->
-    <div class="flex h-full w-full flex-col border p-4">
-      <div class="border-b-2 text-2xl font-bold">展前導覽</div>
-      <div class="flex h-full gap-10">
+  <div id="intro" class="custom-flex-center p-2 py-10 sm:p-6 lg:h-screen">
+    <div
+      class="max-w-8xl flex h-full w-full flex-col rounded-[3rem] border-2 p-5 py-7 sm:p-20 sm:py-24"
+    >
+      <div
+        class="border-b pb-3 font-gothic text-3xl sm:text-5xl lg:pb-8 lg:text-6xl lg:tracking-widest"
+      >
+        展前導覽
+      </div>
+      <div class="flex h-full flex-col gap-5 lg:flex-row lg:gap-8">
         <div class="flex-1">
-          <div class="text-4xl">Lost and Found</div>
-          <div>
-            Amet cupidatat in adipisicing irure labore eiusmod proident non
-            voluptate commodo id. Dolore proident consequat dolor incididunt
-            quis incididunt consectetur excepteur nulla. Deserunt in labore quis
-            in deserunt ut consequat tempor sint mollit cillum. Cupidatat minim
-            aute exercitation.
+          <div class="mt-5 text-3xl sm:text-5xl lg:mt-12 2xl:text-7xl">
+            Lost and Found
           </div>
+          <IntroText class="mt-4 lg:mt-20">
+            這是一個//遺落跟找尋 / 失去而獲得//的過程。<br />
+            微風撫過小島的邊緣，枝葉婆娑⋯枯黃的葉片，<br />
+            迴旋、飛舞，然後落地；隨著時間的進程靜靜散<br />
+            落於樹的身旁。 <br />但它們並沒有真正離去⋯ ⋯<br />
+            西南季風挾來豐沛的雨水，在死去的同時，她重<br />生於新一圈的年輪。
+          </IntroText>
         </div>
-        <div class="flex flex-1 flex-col justify-center">
-          <div>生生不息......?</div>
-          <div>
-            Amet cupidatat in adipisicing irure labore eiusmod proident non
-            voluptate commodo id. Dolore proident consequat dolor incididunt
-          </div>
-          <div>失而復得......?</div>
-          <div>
-            Amet cupidatat in adipisicing irure labore eiusmod proident non
-          </div>
+        <div
+          class="flex flex-1 flex-col justify-center align-middle lg:-mt-20 2xl:mt-0"
+        >
+          <IntroTag>生生不息⋯⋯?</IntroTag>
+          <IntroText class="mt-1">
+            在已經記載，或不及記載的時間裡，事件作為點，點與點連接連貫成為故事線，而線與線交織成為歷史的面貌。<br />
+            台灣，我們的母親島，古老而優美的南島音色在千百年間伴著我們不斷舞動，
+            而每一個節奏都落成一個已踏的腳步，隨著下一個步伐變成過去的回憶，細細碎碎地遺落在已經之路。
+          </IntroText>
+          <IntroTag class="mt-2 lg:mt-4">失而復得⋯⋯！</IntroTag>
+          <IntroText class="mt-1">
+            來到二十一世紀，我們丟失了什麼？
+            有時候我們丟了東西，自己也不曉得；甚至於丟失了自己，也毫無知覺。
+          </IntroText>
         </div>
       </div>
-      <div class="font-serif text-6xl font-bold">INTRO</div>
     </div>
-    <!-- DEBUG END -->
   </div>
 </template>

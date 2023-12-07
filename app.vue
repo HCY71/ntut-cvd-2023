@@ -60,6 +60,10 @@ html {
   align-items: center;
 }
 
+.custom-hidden {
+  display: none;
+  opacity: 0;
+}
 /* DEBUG */
 .debug {
   @apply border-2 border-slate-500;

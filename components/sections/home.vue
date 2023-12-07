@@ -22,6 +22,9 @@ const exhibitions = [
     <div
       class="custom-flex-center relative flex-col text-black lg:h-4/5 lg:flex-row-reverse lg:!items-end lg:!justify-between"
     >
+      <h1 class="custom-hidden">
+        失物招領 Lost and Found | 北科大文化事業發展系 109級畢業展
+      </h1>
       <div
         class="mt-12 w-96 max-w-full sm:mt-24 sm:w-4/5 lg:w-full lg:max-w-2xl xl:w-4/5 xl:max-w-7xl"
       >
@@ -30,7 +33,7 @@ const exhibitions = [
         <img src="@/assets/project_des.png" alt="" class="" />
       </div>
       <div
-        class="font-gothic custom-flex-center mt-6 w-full lg:mb-8 lg:w-1/2 xl:mb-[3vw]"
+        class="custom-flex-center mt-6 w-full font-gothic lg:mb-8 lg:w-1/2 xl:mb-[3vw]"
       >
         <div
           class="flex w-96 flex-col gap-4 pl-6 sm:w-4/5 sm:pl-10 md:pl-12 lg:pl-0 xl:gap-10"
