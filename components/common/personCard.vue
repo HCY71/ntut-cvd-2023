@@ -30,7 +30,7 @@ defineProps(["img", "first", "second", "isDirector", "isTeacher", "isRounded"]);
       }"
     >
       <img
-        v-if="first.includes('assets')"
+        v-if="first.includes('_nuxt')"
         :src="first"
         alt=""
         class="mb-1 mt-2 w-[100px] sm:w-32 md:w-32"
