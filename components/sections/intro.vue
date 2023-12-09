@@ -1,7 +1,7 @@
 <template>
   <div id="intro" class="custom-flex-center p-2 py-10 sm:p-6 lg:h-screen">
     <div
-      class="max-w-8xl flex h-full w-full flex-col rounded-[3rem] border-2 p-5 py-7 sm:p-20 sm:py-24"
+      class="flex h-full w-full max-w-8xl flex-col rounded-[3rem] border-2 p-5 py-7 sm:p-20 sm:py-24 lg:max-h-[860px] xl:max-h-[1024px]"
     >
       <div
         class="border-b pb-3 font-gothic text-3xl sm:text-5xl lg:pb-8 lg:text-6xl lg:tracking-widest"
@@ -22,7 +22,7 @@
           </IntroText>
         </div>
         <div
-          class="flex flex-1 flex-col justify-center align-middle lg:-mt-20 2xl:mt-0"
+          class="flex flex-1 flex-col justify-center align-middle lg:mt-20 2xl:mt-0"
         >
           <IntroTag>生生不息⋯⋯?</IntroTag>
           <IntroText class="mt-1">
