@@ -16,11 +16,7 @@ const exhibitions = [
     loc: "剝皮寮歷史街區",
   },
 ];
-onMounted(() => {
-  setTimeout(() => {
-    timelineHome();
-  }, 1500);
-});
+onMounted(timelineHome);
 </script>
 <template>
   <div class="relative h-screen bg-white">

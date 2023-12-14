@@ -1,7 +1,7 @@
 <template>
   <div
     id="loader"
-    class="custom-flex-center sticky left-0 top-0 z-10 h-screen w-screen flex-col bg-brand-950"
+    class="custom-flex-center fixed left-0 top-0 z-10 h-screen w-screen flex-col bg-brand-950"
   >
     <div
       class="absolute top-1/2 -mt-[15%] -translate-y-1/2 text-[20vw] font-extrabold"

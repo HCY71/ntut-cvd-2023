@@ -60,7 +60,7 @@ useHead({
 
 onMounted(() => {
   // DEBUG
-  introConsole();
+  // introConsole();
 });
 </script>
 <template>
