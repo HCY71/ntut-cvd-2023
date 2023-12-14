@@ -46,7 +46,7 @@ const projectData = [
       },
       {
         name: "彩瓷風雲間─釉上彩繪融入3D列印技術應用於陶瓷原模製造",
-        url: "https://www.google.com",
+        url: "https://www.behance.net/gallery/185532183/3D",
         author: "陳力維",
         img: project1Image2,
       },
@@ -57,7 +57,7 @@ const projectData = [
         img: project1Image3,
       },
       {
-        name: "挑戰主流文化：Voguing在台灣的深入研究",
+        name: "挑戰主流文化：Voguing在臺灣的深入研究",
         url: "https://www.behance.net/gallery/185512447/Voguing",
         author: "黃冠檠",
         img: project1Image4,
@@ -72,13 +72,13 @@ const projectData = [
         name: "河岸故事：基隆田寮河生活記憶之傳承與推廣",
         url: "https://www.google.com",
         author: "涂可諭",
-        img: project1Image6,
+        img: project1Image7,
       },
       {
         name: "作伴（辦桌）─訪談總鋪師及傳承辦桌文化",
         url: "https://www.behance.net/gallery/185601829/_",
         author: "馮宣穎、王憲義",
-        img: project1Image7,
+        img: project1Image6,
       },
       {
         name: "以地域文化價值引導環境永續： 客家保存食文化的新美學",
@@ -107,7 +107,7 @@ const projectData = [
       },
       {
         name: "饗硯 — 陶硯的工藝創新與文化永續應用",
-        url: "https://www.behance.net/gallery/185421059/",
+        url: "https://www.behance.net/gallery/185421059/_",
         author: "許菁菁",
         img: project2Image3,
       },
@@ -130,7 +130,7 @@ const projectData = [
         img: project2Image6,
       },
       {
-        name: "穿越 — 台北歷史建築探析與透視轉化",
+        name: "穿越 — 臺北歷史建築探析與透視轉化",
         url: "https://www.behance.net/gallery/185854425/_",
         author: "林義翔",
         img: project2Image7,
@@ -149,19 +149,19 @@ const projectData = [
       "人類的軌跡呈圓形，<br/>假如開始同時是結束的話，<br/>我願意扭過頭再回到來時路。",
     links: [
       {
-        name: "Oasis • 苒苒蒔日 — 以陶瓷器皿再現青田街地方紋理",
-        url: "https://www.behance.net/gallery/185395401/Oasis-?",
-        author: "張戎佳",
-        img: project3Image1,
-      },
-      {
         name: "Pyanan — 宜蘭縣南山部落深度旅遊教育推廣計畫",
         url: "https://www.behance.net/gallery/185466389/Pyanan-",
         author: "林姿嫻",
+        img: project3Image1,
+      },
+      {
+        name: "Oasis • 苒苒蒔日 — 以陶瓷器皿再現青田街地方紋理",
+        url: "https://www.behance.net/gallery/185395401/Oasis-?",
+        author: "張戎佳",
         img: project3Image2,
       },
       {
-        name: "台灣好鄉 — 以嗅覺符碼建構地方意象之策略研究",
+        name: "臺灣好鄉 — 以嗅覺符碼建構地方意象之策略研究",
         url: "https://www.behance.net/gallery/185895291/_",
         author: "陳柏翰",
         img: project3Image3,
@@ -179,7 +179,7 @@ const projectData = [
         img: project3Image5,
       },
       {
-        name: "上學日 — 從權力結構、性別與自我認同議題探究臺灣學生制服文化",
+        name: "上學日 — 從權利、性別與自我認同議題探究臺灣學生制服文化",
         url: "https://www.behance.net/gallery/185493915/_",
         author: "黃欣宜、許雅婷",
         img: project3Image6,
@@ -254,17 +254,20 @@ const projectData = [
     ],
   },
 ];
+
+onMounted(timelineProjects);
 </script>
 
 <template>
   <div id="projects" class="pb-10 md:pb-20">
     <CommonBanner>展覽作品</CommonBanner>
     <Project
-      v-for="p in projectData"
+      v-for="(p, id) in projectData"
       :title="p.title"
       :subtitle="p.subtitle"
       :links="p.links"
       class="mx-auto"
+      :id="'project-' + id"
     />
   </div>
 </template>

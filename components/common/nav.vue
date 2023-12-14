@@ -11,14 +11,18 @@ const sections = [
   <div
     class="relative flex flex-col gap-6 bg-black p-4 sm:p-6 md:flex-row md:items-end md:justify-between md:gap-20 md:p-8"
   >
-    <div class="flex w-60 flex-col gap-1 md:w-64 lg:w-80">
+    <div class="ani-nav-imgs flex w-60 flex-col gap-1 md:w-64 lg:w-80">
       <img src="@/assets/brand.png" alt="" class="w-full" />
       <img src="@/assets/brand_en.png" alt="" class="w-full" />
     </div>
     <div
       class="flex max-w-xl justify-between gap-5 font-['Dela_Gothic_One'] text-base tracking-wide sm:text-2xl md:w-full md:justify-between md:gap-0 lg:max-w-3xl lg:text-3xl"
     >
-      <a v-for="s in sections" :href="s.id" class="md:leading-none">
+      <a
+        v-for="s in sections"
+        :href="s.id"
+        class="ani-nav-items md:leading-none"
+      >
         {{ s.name }}
       </a>
     </div>

@@ -40,7 +40,7 @@ const teachersCol1 = [
   },
   {
     name: teacherName4,
-    eng: "Han-Hsiu, Chen",
+    eng: "Hsiu-Hui, Yang",
     img: teacherImage4,
     text: "喜大家完成了最艱難的畢專！將近一年的努力，終於要畫下完美的句點了，大家辛苦了！我大聲地為大家鼓掌，恭喜恭喜！<br><br>看著大家從只有構想的初審，到慢慢成形的二審，一步步成長，實著令人驚豔！我內心除了開心外，還浮現了幾個字：滴水穿石。原來，一些看似沒有成果的日常努力，日積月累，是可以造就不凡的！<br><br>專題做完，意味著大家就要畢業了，還真有點捨不得！想跟大家說的是，不管日後大家飛得再高，走得再遠，我都願意當大家休息的中島。隨時歡迎你，回來坐坐，喝杯茶，聊一聊，然後再繼續前進。<br>",
   },
@@ -66,17 +66,19 @@ const teachersCol2 = [
   },
   {
     name: teacherName8,
-    eng: "Han-Hsiu, Chen",
+    eng: "Yueh-Cheng, Wu",
     img: teacherImage8,
     text: "",
   },
 ];
 
 const allTeachers = [teachersCol1, teachersCol2];
+
+onMounted(timelineTeachers);
 </script>
 
 <template>
-  <div class="bg-brand-50 py-5 pb-20 text-brand-700 md:pb-40">
+  <div class="bg-brand-50 py-5 pb-20 text-brand-700 md:pb-40" id="teachers-2">
     <CommonBanner :isDark="true"> 老師的話 </CommonBanner>
     <div
       class="mx-auto mt-12 md:mt-20 lg:mt-24 lg:max-w-screen-lg xl:mt-28 xl:max-w-screen-2xl"
@@ -87,28 +89,33 @@ const allTeachers = [teachersCol1, teachersCol2];
           first="109級總指導"
           second="鄭麗玲 老師"
           :isDirector="true"
-          class="lg:pr-24"
+          class="ani-teacher-2-card lg:pr-24"
         />
         <div
-          class="font-hanWang mt-6 px-8 sm:px-12 sm:text-lg lg:px-28 lg:text-xl lg:leading-normal xl:mt-10 xl:text-2xl"
+          class="ani-teacher-2-words mt-6 px-8 font-hanWang sm:px-12 sm:text-lg lg:px-28 lg:text-xl lg:leading-normal xl:mt-10 xl:text-2xl"
         >
           親愛的109級同學<br /><br />
           很高興我們終於走到這裡，看到畢業專刊出爐的這一刻，相信大家都有壓力終於放下的輕鬆感。回憶一年多來經歷畢業專題的各種大小事務，從一開始為決定哪一個主題而煩心、苦思文化內涵與作品型態的撞牆期、製作過程不順利的沮喪、期限內完成的壓力、最後趕工期等各種痛苦。但是當一步步克服問題，作品拼圖逐漸完成之際，相信你們也感受到創作的樂趣。這樣的成就感驅動下再次繼續前進，成為一個良性循環。畢業專題製作就是這樣一場酸甜苦辣交織，情緒張力堆疊飽滿的畢業大戲啊。<br /><br />
           我們109級的同學們，各有不同性格，進行的主題也不太相同。除了努力在期限內完成自己的作品，以最完美的樣貌展示出來，大家同時共同策劃2場展覽——為期8天的校內畢業展與5天的校外展，大家分組分工，互相協調合作，這兩場畢業成果展，是109級同學們共同完成作品。《失物招領Lost
           and
           Found—國立臺北科技大學文化事業發展系109級畢業成果展專刊》紀錄你們努力過程，將展覽的瞬間凝聚結晶，相信多年之後翻閱，大學四年學習的點點滴滴，重新湧上心頭。請大家不吝惜地給自己鼓掌，謝謝各位的努力與付出。<br /><br />
-          國立台北科技大學 文化事業發展系<br />
+          國立臺北科技大學 文化事業發展系<br />
           109級總指導 鄭麗玲
         </div>
       </div>
       <div
+        id="teachers-2-cards"
         class="mt-20 flex flex-col items-start gap-12 md:flex-row md:px-6 lg:gap-20 lg:px-20 xl:gap-40 xl:px-32"
       >
         <div
-          v-for="teacherCol in allTeachers"
+          v-for="(teacherCol, colId) in allTeachers"
           class="flex w-full flex-col items-start gap-12 lg:gap-16 xl:gap-20"
         >
-          <div v-for="t in teacherCol" class="w-full px-8 sm:px-12 md:px-0">
+          <div
+            v-for="t in teacherCol"
+            class="w-full px-8 sm:px-12 md:px-0"
+            :class="['ani-teacher-card-' + colId]"
+          >
             <CommonPersonCard
               :img="t.img"
               :first="t.name"
@@ -118,7 +125,7 @@ const allTeachers = [teachersCol1, teachersCol2];
               class="pl-12 lg:pr-0"
             />
             <div
-              class="font-hanWang mt-3 md:px-6 lg:px-4 lg:text-lg xl:mt-6 xl:px-0"
+              class="mt-3 font-hanWang md:px-6 lg:px-4 lg:text-lg xl:mt-6 xl:px-0"
               v-html="t.text"
             />
           </div>

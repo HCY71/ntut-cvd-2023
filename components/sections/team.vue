@@ -30,12 +30,13 @@ const teamMembers = [
     name: memberName1,
     img: memberImg1,
     words:
-      "在這段不容易的旅程中，謝謝大家一起堅持了下來，心中滿滿的感動與感謝。謝謝每位你們，成就了一個群體的完整。在「Lost and Found失物招領」裡，我發掘失去並不意味著終結，因為我們獲得了一個重新找尋的機會。“Not until we are lost do we begin to understand ourselves.” —Henry David Thoreau 不要在意那些失去的，相信我們會在探尋的旅途中，找到比失去更珍貴的東西，祝福大家！",
+      "在這段不容易的旅程中，謝謝大家一起堅持了下來，心中滿滿的感動與感謝。謝謝每位你們，成就了一個群體的完整。在「Lost and Found失物招領」裡，我發掘失去並不意味著終結，因為我們獲得了一個重新找尋的機會。<br/>“Not until we are lost do we begin to understand ourselves.” —Henry David Thoreau 不要在意那些失去的，相信我們會在探尋的旅途中，找到比失去更珍貴的東西，祝福大家！",
   },
   {
     name: memberName2,
     img: memberImg2,
-    words: "",
+    words:
+      "畢業展覽走到最後一步，我們的大學生活也即將來到尾聲，感謝所有同學的努力、付出和協助。過了這個終點，不知道我們的下一個盡頭會在哪裡，但仍然祝福大家不論身在何方、正在前往哪個方向，一切都能安好無恙。",
   },
   {
     name: memberName3,
@@ -62,10 +63,10 @@ const teamMembers = [
       "專題能夠圓滿的結束都是大家這一年一起努力的成果，沒有大家的統籌與領導，就沒有現在的「失物招領」。也謝謝各位同學們的配合，讓專題這項大課題更加完整。<br>期許大家都能在這段期間有個美好的收穫，辛苦大家了！",
   },
   {
-    name: memberName7,
-    img: memberImg7,
+    name: memberName9,
+    img: memberImg9,
     words:
-      "畢業專題即將落下帷幕。站在這段旅程的終點，我想表達對每一位組員的深深感激和由衷的感動。大家都是這趟旅程最美麗的風景。過程每一次的討論都是心靈的碰撞，每一次的合作都是靈魂的共振。也就是諸多「每一次」大家才能一起成就整個專題。<br>這段旅程或許將結束，但我們攜手前行的故事將永遠被刻在心底。",
+      "「失物招領」是獨一無二的，因為它承載了每一個人的心血和努力，每一次的改進和調整，都是我們向著目標邁進的腳步，這是一個充滿考驗與艱辛的籌備之路，也正是這些挑戰讓我們能夠成長進步，將成為人生中珍貴的回憶。",
   },
   {
     name: memberName8,
@@ -73,21 +74,23 @@ const teamMembers = [
     words: "能者多勞，大家辛苦了~",
   },
   {
-    name: memberName9,
-    img: memberImg9,
-    words:
-      "「失物招領」是獨一無二的，因為它承載了每一個人的心血和努力，每一次的改進和調整，都是我們向著目標邁進的腳步，這是一個充滿考驗與艱辛的籌備之路，也正是這些挑戰讓我們能夠成長進步，將成為人生中珍貴的回憶。",
-  },
-  {
-    name: memberName10,
-    img: memberImg10,
-    words: "",
-  },
-  {
     name: memberName11,
     img: memberImg11,
     words:
       "整整將近一年的籌備期，很開心終於走到寫感言的時刻了。感謝好partner其謙，也辛苦所有籌備展覽的幹部與同學，沒有你們就沒有「失物招領」，希望大家未來一樣可以在自己喜歡的道路上持續發光發熱，加油！",
+  },
+
+  {
+    name: memberName10,
+    img: memberImg10,
+    words:
+      "專題大家都付出了很多，希望畢業專題可以順利結束，大家也可以順順利利畢業，未來都可以往自己想要去的地方繼續努力!",
+  },
+  {
+    name: memberName7,
+    img: memberImg7,
+    words:
+      "畢業專題即將落下帷幕。站在這段旅程的終點，我想表達對每一位組員的深深感激和由衷的感動。大家都是這趟旅程最美麗的風景。過程每一次的討論都是心靈的碰撞，每一次的合作都是靈魂的共振。也就是諸多「每一次」大家才能一起成就整個專題。<br>這段旅程或許將結束，但我們攜手前行的故事將永遠被刻在心底。",
   },
   {
     name: memberName12,
@@ -96,6 +99,8 @@ const teamMembers = [
       "這次展覽透過大家的努力，專題終於走到了尾聲。在這一年中經歷了許多困難，但經由大家的溝通與合作，使展覽最終展現了現今的樣貌。這次籌備展覽讓我獲得了許多經驗以及豐富的回憶，謝謝大家一路的陪伴。",
   },
 ];
+
+onMounted(timelineTeam);
 </script>
 <template>
   <div id="team" class="py-5 lg:pb-20 lg:pt-14 xl:pb-40 xl:pt-20">
@@ -105,10 +110,10 @@ const teamMembers = [
     >
       <div
         v-for="m in teamMembers"
-        class="md:w-[95%] md:odd:justify-self-start md:even:justify-self-end lg:w-full"
+        class="ani-team-card md:w-[95%] md:odd:justify-self-start md:even:justify-self-end lg:w-full"
       >
         <CommonPersonCard :img="m.img" :first="m.name" />
-        <div v-html="m.words" class="font-hanWang -ml-10 mt-4 md:text-lg" />
+        <div v-html="m.words" class="-ml-10 mt-4 font-hanWang md:text-lg" />
       </div>
     </div>
   </div>

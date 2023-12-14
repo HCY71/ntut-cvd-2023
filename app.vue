@@ -57,9 +57,15 @@ useHead({
   //   },
   // ],
 });
+
+onMounted(() => {
+  // DEBUG
+  // introConsole();
+});
 </script>
 <template>
   <div>
+    <CommonLoader />
     <SectionsHome />
     <SectionsIntro />
     <SectionsProjects />
@@ -71,9 +77,9 @@ useHead({
 </template>
 
 <style>
+/* Global Styles */
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
 @tailwind base;
-/* Global Styles */
 
 @layer base {
   @font-face {
@@ -89,7 +95,7 @@ useHead({
 }
 
 html {
-  @apply scroll-smooth bg-black text-white;
+  @apply overflow-hidden scroll-smooth bg-black text-white;
 }
 body {
   @apply bg-black;
