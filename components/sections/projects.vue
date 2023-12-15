@@ -40,7 +40,7 @@ const projectData = [
     links: [
       {
         name: "琴革─皮革鞣製與臺灣在地素材轉化實踐",
-        url: "https://www.behance.net/gallery/185028271/_",
+        url: "https://www.behance.net/gallery/186761339/_",
         author: "陳昱璇",
         img: project1Image1,
       },
@@ -70,7 +70,7 @@ const projectData = [
       },
       {
         name: "河岸故事：基隆田寮河生活記憶之傳承與推廣",
-        url: "https://www.google.com",
+        url: "",
         author: "涂可諭",
         img: project1Image7,
       },
@@ -125,7 +125,7 @@ const projectData = [
       },
       {
         name: "重版出來 — 再現日治臺灣王詩琅、龍瑛宗、張文環之文學地景",
-        url: "https://www.behance.net/portfolio/editor?project_id=185427747",
+        url: "https://www.behance.net/gallery/185427747/_",
         author: "陳彥寧",
         img: project2Image6,
       },

@@ -101,8 +101,8 @@ body {
   @apply bg-black;
 }
 .h-screen {
+  height: 100lvh;
   height: 100vh;
-  height: 100svh;
 }
 .custom-flex-center {
   display: flex;

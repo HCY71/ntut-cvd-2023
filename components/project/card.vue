@@ -6,6 +6,7 @@ defineProps(["link"]);
     <a
       class="w-full cursor-pointer"
       :href="link.url"
+      :class="{ 'pointer-events-none !cursor-auto': link.url === '' }"
       rel="noopener noreferrer"
       target="_blank"
     >
